@@ -64,13 +64,13 @@ right:10%;
 `
 
 /** Buttons 컴포넌트 적용 style */
-export const StBtnBox = styled.div`
+export const BtnBox = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
 `
 
-export const StBtnBoxHAlign = styled.div`
+export const BtnBoxHAlign = styled.div`
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -78,7 +78,7 @@ export const StBtnBoxHAlign = styled.div`
 
 /** Button 컴포넌트 적용 style */
 // 버튼 스타일
-export const StBtnL = styled.button`
+export const BtnL = styled.button`
   height : 50px;
   width : 200px;
   border-radius: 8px;
@@ -97,7 +97,7 @@ export const StBtnL = styled.button`
   }
 `
 
-export const StBtnM = styled.button`
+export const BtnM = styled.button`
   height : 45px;
   width : 130px;
   border-radius: 8px;
@@ -114,7 +114,7 @@ export const StBtnM = styled.button`
   }
 `
 
-export const StBtnS = styled.button`
+export const BtnS = styled.button`
   height : 40px;
   width : 100px;
   border-radius: 8px;
@@ -133,7 +133,7 @@ export const StBtnS = styled.button`
 `
 
 // 버튼 내부 텍스트 및 아이콘 정렬
-export const StTtIcnContain = styled.div`
+export const TtIcnContain = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,4 +154,86 @@ height:30px;
 border-radius:10px;
 border: 1px solid gray;
 padding: 10px;
+`
+
+/** Select 스타일 */
+export const OutLayOut = styled.div`
+    display : ${(props) => { return props.isDropMenuOpen ? 'flex' : 'none' }};
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index:0;
+`
+export const SelectSection = styled.div`
+    border: 3px solid rgb(221, 221, 221);
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    width : 100%;
+    margin-top: 50px;
+`
+
+export const ContianSelecters = styled.div`
+    position: relative;
+    display: flex;
+    gap : 10px;
+
+`
+export const BtnSelecter = styled.button`
+    border: 1px solid rgb(221, 221, 221);
+    height: 40px;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 7px;
+    display: flex;
+    
+`
+export const BtnInnerElement = styled.div`
+    margin : 10px;
+`
+
+/**옵션 */
+export const OptSelecter = styled.div`
+    border: 1px solid rgb(221, 221, 221);
+    height: 200px;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    display: flex;
+    flex-direction : column;
+    justify-content: space-around;
+    position: absolute;
+    top: 620px;
+    display : ${(props) => { return props.isDropMenuOpen ? 'flex' : 'none' }};
+`
+
+export const OptElement = styled.div`
+    height: 100%;
+    display: flex;
+    align-items: center;
+    &:hover{
+        background-color: #CCCCCC;
+    };
+    &:first-child{
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
+    }
+    &:last-child{
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 12px;
+    }
+`
+
+export const OptTxt = styled.p`
+    margin : 15px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: small;
 `

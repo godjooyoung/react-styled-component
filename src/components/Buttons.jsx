@@ -12,34 +12,20 @@ function Buttons() {
 
     }
     return (
-        <commonSt.StBtnBox>
+        <commonSt.BtnBox>
             <commonSt.Title>Button</commonSt.Title>
-            <commonSt.StBtnBoxHAlign>
+            <commonSt.BtnBoxHAlign>
                 <Button size="l" type="primary" hasIcon="arrow" onClick={btnAlertEventHandler}>Large Primary Button</Button>
                 <Button size="m" type="primary">Medium</Button>
                 <Button size="s" type="primary">small</Button>
-            </commonSt.StBtnBoxHAlign>
-            <commonSt.StBtnBoxHAlign>
+            </commonSt.BtnBoxHAlign>
+            <commonSt.BtnBoxHAlign>
                 <Button size="l" type="negative" hasIcon="alarm" onClick={btnPromtEventHandler}>Large Negative Button</Button>
                 <Button size="m" type="negative">Medium</Button>
                 <Button size="s" type="negative">small</Button>
-            </commonSt.StBtnBoxHAlign>
-        </commonSt.StBtnBox>
+            </commonSt.BtnBoxHAlign>
+        </commonSt.BtnBox>
     );
 }
-
-// 공통스타일로 분리하여서 가져옴. 
-
-// const StBtnBox = styled.div`
-//     display: flex;
-//     flex-direction: column;
-//     gap: 10px;
-// `
-
-// const StBtnBoxHAlign = styled.div`
-//     display: flex;
-//     flex-direction: row;
-//     gap: 10px;
-// `
 
 export default Buttons;
