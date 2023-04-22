@@ -13,7 +13,7 @@ function Buttons() {
     }
     return (
         <commonSt.StBtnBox>
-            <commonSt.StTitle>Button</commonSt.StTitle>
+            <commonSt.Title>Button</commonSt.Title>
             <commonSt.StBtnBoxHAlign>
                 <Button size="l" type="primary" hasIcon="arrow" onClick={btnAlertEventHandler}>Large Primary Button</Button>
                 <Button size="m" type="primary">Medium</Button>
