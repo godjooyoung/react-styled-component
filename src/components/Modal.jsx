@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
-import { StCloseModalButton, StContainer, StContent, StModalButton, StModalContent, StModalOverlay, StRoundButton, StTitle } from './StyledComponents'
 import Button from './Button';
+import * as commonSt from './StyledComponents'
+
 
 function Modal() {
   
@@ -26,36 +27,38 @@ function Modal() {
 
   return (
     <>
-    <StTitle>Modal</StTitle>
-    <StContainer>
+    <commonSt.Title>Modal</commonSt.Title>
+    <commonSt.Container>
     <Button type="primary" size="m" name='modal' value onClick={toggleModal}>open modal</Button>
     <Button type="negative" size="l" onClick={toggleModal1}>open modal</Button>
-    </StContainer>
+    </commonSt.Container>
+
     {modal && 
-    <StModalOverlay>
-      <StModalContent>
-        <StContent>닫기와 확인 버튼 2개가 있고, 외부 영역을 눌러도 모달이 닫히지 않아요.
-        </StContent>
-        <StModalButton>
+    <commonSt.ModalOverlay>
+      <commonSt.ModalContent>
+        <commonSt.Content>닫기와 확인 버튼 2개가 있고, 외부 영역을 눌러도 모달이 닫히지 않아요.
+        </commonSt.Content>
+        <commonSt.ModalButton>
           <Button 
           type= "negative" size="s" 
           onClick={toggleModal} >닫기
           </Button>
           <Button type= "primary" size="s">확인
           </Button>
-        </StModalButton>
-      </StModalContent>
-    </StModalOverlay>}
+        </commonSt.ModalButton>
+      </commonSt.ModalContent>
+    </commonSt.ModalOverlay>}
+
     {modal1 && 
-    <StModalOverlay ref={outSection} onClick={outSectionClick}>
-      <StModalContent>
-        <StContent >
+    <commonSt.ModalOverlay ref={outSection} onClick={outSectionClick}>
+      <commonSt.ModalContent>
+        <commonSt.Content >
         닫기 버튼 1개가 있고,<br/>
-        외부 영역을 누르면 모달이 닫혀요.</StContent>
-        <StRoundButton
-        onClick={toggleModal1}>x</StRoundButton>
-      </StModalContent>
-    </StModalOverlay>}
+        외부 영역을 누르면 모달이 닫혀요.</commonSt.Content>
+        <commonSt.RoundButton
+        onClick={toggleModal1}>x</commonSt.RoundButton>
+      </commonSt.ModalContent>
+    </commonSt.ModalOverlay>}
     </>
   )
 }

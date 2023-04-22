@@ -6,7 +6,7 @@ function Button(props) {
     return (
         <>
             {
-                props.size == 'l'?<commonSt.StBtnL type={props.type} onClick={props.onClick}><commonSt.StTtIcnContain>{props.children}{props.hasIcon?<ButtonIcon type={props.hasIcon}/>:''}</commonSt.StTtIcnContain></commonSt.StBtnL> : (props.size == 'm' ? <commonSt.StBtnM type={props.type} onClick={props.onClick}>{props.children}</commonSt.StBtnM> : <commonSt.StBtnS type={props.type} onClick={props.onClick}>{props.children}</commonSt.StBtnS>)
+                props.size === 'l'?<commonSt.StBtnL type={props.type} onClick={props.onClick}><commonSt.StTtIcnContain>{props.children}{props.hasIcon?<ButtonIcon type={props.hasIcon}/>:''}</commonSt.StTtIcnContain></commonSt.StBtnL> : (props.size === 'm' ? <commonSt.StBtnM type={props.type} onClick={props.onClick}>{props.children}</commonSt.StBtnM> : <commonSt.StBtnS type={props.type} onClick={props.onClick}>{props.children}</commonSt.StBtnS>)
             }
         </>
     );

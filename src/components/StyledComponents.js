@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const StTitle = styled.h2`
+export const Title = styled.h2`
 font-size: 2em;
 margin-block-start: 0.67em;
 margin-block-end: 0.67em;
@@ -10,7 +10,7 @@ margin-inline-end: 0px;
 font-weight: bold;
 `
 
-export const StModalOverlay = styled.div`
+export const ModalOverlay = styled.div`
 width:100vw;
 height:100vh;
 top:0;
@@ -19,9 +19,10 @@ right:0;
 bottom:0;
 position:fixed;
 background-color:rgba(49,49,49,0.8);
+z-index:10;
 `
 
-export const StModalContent = styled.div`
+export const ModalContent = styled.div`
 position:relative;
 top:40%;
 left:50%;
@@ -33,8 +34,9 @@ max-width:600px;
 min-width:300px;
 height:200px;
 width:400px;
+z-index:9;
 `
-export const StModalButton = styled.div`
+export const ModalButton = styled.div`
 position:absolute;
 bottom:20%;
 left:45%;
@@ -42,15 +44,15 @@ display:flex;
 gap:10px;
 `
 
-export const StContainer = styled.div`
+export const Container = styled.div`
 display: flex;
 gap: 7px;
 `
 
-export const StContent = styled.p`
+export const Content = styled.p`
 padding:20px;
 `
-export const StRoundButton = styled.button`
+export const RoundButton = styled.button`
 border:1px solid black;
 background-color:rgb(220, 220, 220);
 border-radius:50%;
@@ -81,16 +83,16 @@ export const StBtnL = styled.button`
   width : 200px;
   border-radius: 8px;
   border: 3px solid ${(props) => {
-        return props.type == "primary" ? '#FFF2F2' : '#E5E0FF'
-    }};
+    return props.type === "primary" ? '#FFF2F2' : '#E5E0FF'
+  }};
   background-color: rgb(255, 255, 255);
-  color : ${(props) => { return props.type == 'negative' ? '#98B1F3' : '#5E72BF' }};
+  color : ${(props) => { return props.type === 'negative' ? '#98B1F3' : '#5E72BF' }};
   font-weight: 900;
   cursor: pointer;
   &:active{
     border: 3px solid ${(props) => {
-        return props.type == "primary" ? '#EBDEDE' : '#D1CCEB'
-    }};
+    return props.type === "primary" ? '#EBDEDE' : '#D1CCEB'
+  }};
     background-color: rgb(0,0,0,0.1)
   }
 `
@@ -101,14 +103,14 @@ export const StBtnM = styled.button`
   border-radius: 8px;
   border: none;
   background-color: ${(props) => {
-        return props.type == "primary" ? '#FFF2F2' : '#E5E0FF'
-    }};
-  color : ${(props) => { return props.type == 'negative' ? '#98B1F3' : '#5E72BF' }};
+    return props.type === "primary" ? '#FFF2F2' : '#E5E0FF'
+  }};
+  color : ${(props) => { return props.type === 'negative' ? '#98B1F3' : '#5E72BF' }};
   cursor: pointer;
   &:active{
-    background-color: ${(props)=>{
-        return props.type == 'primary' ? '#EBDEDE' : '#D1CCEB'
-    }}
+    background-color: ${(props) => {
+    return props.type === 'primary' ? '#EBDEDE' : '#D1CCEB'
+  }}
   }
 `
 
@@ -118,15 +120,15 @@ export const StBtnS = styled.button`
   border-radius: 8px;
   border: none;
   background-color: ${(props) => {
-        return props.type == "primary" ? '#FFF2F2' : '#E5E0FF'
+    return props.type === "primary" ? '#FFF2F2' : '#E5E0FF'
 
-    }};
-  color : ${(props) => { return props.type == 'negative' ? '#98B1F3' : '#5E72BF' }};
+  }};
+  color : ${(props) => { return props.type === 'negative' ? '#98B1F3' : '#5E72BF' }};
   cursor: pointer;
   &:active{
-    background-color: ${(props)=>{
-        return props.type == 'primary' ? '#EBDEDE' : '#D1CCEB'
-    }}
+    background-color: ${(props) => {
+    return props.type === 'primary' ? '#EBDEDE' : '#D1CCEB'
+  }}
   }
 `
 
@@ -136,4 +138,20 @@ export const StTtIcnContain = styled.div`
     align-items: center;
     justify-content: center;
     gap: 7px;
+`
+
+//INPUT 
+export const InputMain = styled.div`
+display:flex;
+gap:10px;
+font-size:20px;
+align-items:center;
+
+`
+export const Input = styled.input`
+width:200px;
+height:30px;
+border-radius:10px;
+border: 1px solid gray;
+padding: 10px;
 `
