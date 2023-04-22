@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import ButtonIcon from './ButtonIcon';
 import * as commonSt from './StyledComponents'
 
