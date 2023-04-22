@@ -4,7 +4,8 @@ import styled from "styled-components";
 export const StTitle = styled.h2`
 font-size:40px;
 font-weight:700;
-margin-bottom: 20px;
+margin-bottom: 40px;
+margin-top:30px;
 `
 
 export const StModalOverlay = styled.div`
@@ -34,15 +35,14 @@ width:400px;
 export const StModalButton = styled.div`
 position:absolute;
 bottom:20%;
-left:60%;
+left:45%;
 display:flex;
-
+gap:10px;
 `
-export const StCloseModalButton = styled.button`
-border: none;
-background-color:${(props) => props.backgroundColor};
-color:${(props) => props.color};
-margin:10px;
+
+export const StContainer = styled.div`
+display: flex;
+gap: 7px;
 `
 
 export const StContent = styled.p`
@@ -56,5 +56,5 @@ width:40px;
 height: 40px;
 position:absolute;
 top: 10%;
-right:10%
+right:10%;
 `
