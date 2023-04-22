@@ -27,7 +27,7 @@ function Selects(props) {
         
         <div onClick={BtnDropMenuClose} style={{position:'relative',zIndex:0}}>
         <SelectSection>
-            <commonSt.StTitle>Select</commonSt.StTitle>
+            <commonSt.Title>Select</commonSt.Title>
             <ContianSelecters2>
                 <BtnSelecter onClick={BtnDropMenuOpen}><BtnInnerElement>{currentOpt}</BtnInnerElement><BtnInnerElement>▾</BtnInnerElement></BtnSelecter>
             </ContianSelecters2>
