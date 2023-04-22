@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
-import { StCloseModalButton, StContent, StModalButton, StModalContent, StModalOverlay, StRoundButton, StTitle } from './StyledComponents'
+import { StCloseModalButton, StContainer, StContent, StModalButton, StModalContent, StModalOverlay, StRoundButton, StTitle } from './StyledComponents'
+import Button from './Button';
 
 function Modal() {
   
@@ -26,24 +27,22 @@ function Modal() {
   return (
     <>
     <StTitle>Modal</StTitle>
-    <button name='modal' value onClick={toggleModal}>open modal</button>
-    <button onClick={toggleModal1}>open modal</button>
-
+    <StContainer>
+    <Button type="primary" size="m" name='modal' value onClick={toggleModal}>open modal</Button>
+    <Button type="negative" size="l" onClick={toggleModal1}>open modal</Button>
+    </StContainer>
     {modal && 
     <StModalOverlay>
       <StModalContent>
         <StContent>닫기와 확인 버튼 2개가 있고, 외부 영역을 눌러도 모달이 닫히지 않아요.
         </StContent>
         <StModalButton>
-          <StCloseModalButton 
-        backgroundColor='#E5E0FF' 
-        color='#7286D3'
-        onClick={toggleModal} >닫기
-          </StCloseModalButton>
-          <StCloseModalButton 
-        backgroundColor='#FFF2F2' 
-        color='#8EA7E9'>확인
-          </StCloseModalButton>
+          <Button 
+          type= "negative" size="s" 
+          onClick={toggleModal} >닫기
+          </Button>
+          <Button type= "primary" size="s">확인
+          </Button>
         </StModalButton>
       </StModalContent>
     </StModalOverlay>}
